@@ -1,0 +1,405 @@
+/* exam.css */
+/* 全局设置 */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: "微软雅黑";
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.wrapper {
+  background-color: #fff;
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 1200px;
+  position: absolute;
+  height: 100vh;
+  /* overflow: hidden; */
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  -ms-overflow-style: none !important; /* IE 和 Edge */
+  scrollbar-width: none !important;
+}
+body::-webkit-scrollbar {
+  width: 0 !important;
+  display: none !important;
+}
+.wrapper > .header {
+  box-shadow: 0px 1px 4px 0px #aea9a9;
+}
+.wrapper > .main {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  padding-bottom: 130px;
+}
+.wrapper > .main > .title {
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+  font-size: 14px;
+  color: #000;
+}
+.wrapper > .main > .main-row {
+  height: 540px;
+  overflow: hidden;
+  background-image: url(./新建文件夹/650320.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.wrapper > .main > .main-row .right {
+  width: 380px;
+  height: 100%;
+  display: flex;
+  margin-left: auto;
+  flex-flow: column;
+}
+.wrapper > .main > .main-row .right .right_row_content {
+  height: 400px;
+  display: flex;
+  flex-flow: column;
+  background-color: #fff;
+  overflow: hidden;
+  transition: height 0.3s linear;
+}
+.wrapper
+  > .main
+  > .main-row
+  .right
+  .right_row_content
+  .right_row_content_nav_img {
+  flex: 1;
+  background-image: url(./新建文件夹/6-3-a_0.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.wrapper > .main > .main-row .right .right_row_content .bottom_main_ur {
+  padding: 6px 2px;
+  padding-left: 44px;
+  display: flex;
+  position: relative;
+  flex-flow: column;
+}
+.wrapper > .main > .main-row .right .right_btn.selectOne + .right_row_content {
+  height: 0;
+}
+.wrapper
+  > .main
+  > .main-row
+  .right
+  .right_row_content
+  .bottom_main_ur
+  .bottom_main_ur_img {
+  position: absolute;
+  left: 2px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.wrapper .bottom_main_ur:nth-last-child(1) .bottom_main_ur_img {
+  background-image: url(./新建文件夹/earthweek-35px.jpg);
+}
+.wrapper .bottom_main_ur:nth-last-child(2) .bottom_main_ur_img {
+  background-image: url(./新建文件夹/bb_35px.jpg);
+}
+.wrapper .bottom_main_ur:nth-last-child(3) .bottom_main_ur_img {
+  background-image: url(./新建文件夹/4d-whatson.jpg);
+}
+.wrapper > .main > .main-row .right .right_row_content .bottom_main_ur .title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  background-color: #ebebeb;
+  padding: 2px 6px;
+}
+/* 导航栏 */
+.nav {
+    background: white;
+    height: 42px;
+}
+.navwrapper {
+    width: 1002px;
+    margin: 0 auto;
+}
+.nav ul li {
+    list-style: none;
+    height: 42px;
+    line-height: 42px;
+    float: left;
+}
+.nav ul li a {
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    padding: 0 32px;
+    display: block;
+}
+.nav ul li a:hover {
+    background: white;
+}
+
+/* 二级菜单 */
+.nav ul li ul li {
+    /* 清除子菜单项的浮动 */
+    clear: both;
+    height: 30px;
+    width: 128px;
+}
+.nav ul li ul li a {
+    height: 30px;
+    line-height: 30px;
+    width: 128px;
+    padding: 0;
+    color: black;
+    font-size: 14px;
+    display: block;
+    background: #dde5e6f8;
+}
+.nav ul li ul li a:hover {
+    background: rgb(199, 220, 222);
+}
+.nav ul li ul {
+    display: none;
+}
+.nav ul li:hover ul {
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.navwrapper::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+.wrapper
+  > .main
+  > .main-row
+  .right
+  .right_row_content
+  .bottom_main_ur
+  .content {
+  font-size: 13px;
+  padding: 2px 6px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.content-order {
+  position: relative;
+  font-size: 14px;
+  color: #333;
+  padding-left: 20px;
+}
+.content-order::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-image: url(./新建文件夹/right-arrow-bottom-4.png);
+  width: 10px;
+  height: 10px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.wrapper > .main > .main-row .right_btn {
+  position: relative;
+  width: 100%;
+  height: 35px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 18px;
+}
+.wrapper > .main > .main-row .right_btn:nth-child(1) {
+  background-color: rgb(125, 9, 9);
+}
+.wrapper > .main > .main-row .right_btn:nth-child(2) {
+  background-color: rgb(168, 15, 15);
+}
+.wrapper > .main > .main-row .right_btn:nth-child(3) {
+  background-color: rgb(208, 99, 16);
+}
+.wrapper > .main > .main-row .right_btn:nth-child(4) {
+  background-color: rgb(201, 135, 20);
+}
+.wrapper > .main > .main-row .right_btn > .right_btn_img {
+  width: 8px;
+  height: 11px;
+  background-image: url(./新建文件夹/VA-ArrowRight.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-right: 8px;
+}
+.wrapper > .main > .main-row .right_btn:nth-child(1) > .right_btn_img {
+  transform: rotate(90deg);
+}
+.wrapper > .main > .main-row .right_btn.selectOne > .right_btn_img {
+  transform: rotate(0deg);
+}
+.wrapper > .bottom {
+  position: fixed;
+  width: 1200px;
+  margin: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  /* width: 100%; */
+  display: flex;
+  flex-flow: column;
+  box-shadow: 0px -1px 4px 0px #aea9a9;
+}
+.wrapper > .bottom .bottom_main {
+  display: flex;
+  padding: 10px;
+}
+.wrapper > .bottom .bottom_main > .bottom_main_ur {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+}
+.wrapper > .bottom .bottom_main > .bottom_main_ur:not(:last-child) {
+  margin-right: 10px;
+}
+.wrapper > .bottom .bottom_main > .bottom_main_ur .title {
+  font-size: 14px;
+  color: rgb(0, 76, 255);
+  background-color: #ebebeb;
+  padding: 2px 6px;
+}
+.wrapper > .bottom .bottom_main > .bottom_main_ur .content {
+  font-size: 13px;
+  padding: 2px 6px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.wrapper > .bottom .tell_me {
+  display: flex;
+  padding: 10px;
+  justify-content: flex-end;
+  border-top: 2px solid #000;
+}
+.wrapper > .bottom .tell_me > a {
+  padding: 0 4px;
+  color: #000;
+  line-height: 1;
+}
+.wrapper > .bottom .tell_me > a:hover {
+  color: rgb(13, 120, 234);
+}
+.wrapper > .bottom .tell_me > a:not(:last-child) {
+  border-right: 1px solid #000;
+}
+.header .top {
+  text-align: right;
+  padding: 16px;
+  height: 150px;
+  background-image: url(./新建文件夹/VanAqua_logo.jpg);
+  background-size: 200px;
+  background-repeat: no-repeat;
+  border-bottom: 2px solid #000;
+  background-position: 20px calc(100% - 20px);
+}
+.header .top .top-nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 6px;
+}
+.header > .nav {
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  /* justify-content: center; */
+  align-items: center;
+}
+.header > .nav > span {
+  margin-right: 50px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.top_flex {
+  display: inline-flex;
+  position: relative;
+}
+.top_flex .top-flex-search {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 15px;
+  height: 15px;
+  background-image: url(./新建文件夹/search_button.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.top_flex .top-flex-search:hover {
+  background-image: url(./新建文件夹/more.jpg);
+}
+.header .top .input_top {
+  border: none;
+  background-color: #ebebeb;
+  width: 270px;
+  line-height: 1.8;
+  padding-left: 10px;
+  border-radius: 10px;
+  outline: none;
+}
+.header .top .top-nav > a {
+  padding: 0 4px;
+  line-height: 1;
+}
+.header .top .top-nav > a:hover {
+  color: rgb(13, 120, 234);
+}
+.header .top .top-nav > a:not(:last-child) {
+  border-right: 1px solid #000;
+}
+.main .main-ul {
+  display: flex;
+  padding: 10px;
+}
+
+.main .main-ul .bottom_main_ur {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+}
+.main .main-ul .bottom_main_ur:not(:last-child) {
+  margin-right: 10px;
+}
+.main .main-ul .bottom_main_ur .title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgb(95, 160, 114);
+  padding: 6px 10px;
+}
+.main .main-ul .bottom_main_ur .content {
+  font-size: 20px;
+  color: rgb(95, 160, 131);
+  border: 1px solid #999;
+  border-top-width: 0;
+  padding: 6px 10px;
+}
